@@ -6,7 +6,7 @@
 
 numberN = float(input("Введите число N: "))
 temp = 1
-
+numberN = abs(numberN)
 while temp > 0:
     numberN = round(numberN*10, 4)
     temp = numberN % 10
