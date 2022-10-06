@@ -37,22 +37,6 @@ def Get_random_polinomial(number_k):    # Создание случайного 
     return(result)
 
 
-# def Get_polinomial(coef_list):    # Создание многочлена
-#     result = ""
-#     for i in range(len(coef_list)-1):
-#         if coef_list[i] != 0:
-#             result = result + f" {coef_list[i]}*x^{len(coef_list)-i} {list_sign[i]}"
-
-#     if coef_list[len(coef_list)-1] != 0:
-#         result = result + f" {coef_list[len(coef_list)-1]}*x "
-
-#     if coef_list[len(coef_list)] != 0:
-#         result = result + f"{list_sign[len(coef_list)-1]} {coef_list[len(coef_list)]} = 0"
-#     else:
-#         result = result + " = 0"
-#     return(result)  
-
-
 def Get_polinomial(coef_list):
     my_list = coef_list[::-1]
     res_polinomial = ''
@@ -138,8 +122,8 @@ def Splitting_polinominal(polinominal): # Разбитие многочлена
         my_list.append(int(new_polinominal[-1]))
         coef = 1
         lenght_pol -= 1
-    degree = 1 # степень
-    index_x = lenght_pol-1 # индекс
+    degree = 1 
+    index_x = lenght_pol-1 
     while index_x >= 0:
         if Get_degree(new_polinominal[index_x]) != -1 and Get_degree(new_polinominal[index_x]) == degree:
             my_list.append(Get_coef(new_polinominal[index_x]))
@@ -165,12 +149,7 @@ def Get_summ_pol_polinominal(pol_1, pol_2): # Получение суммы мн
             new_polinominal.append(pol_2[i])
     return new_polinominal
 
-    # write_file("file34_res.txt", create_str(new_polinominal))
-    # with open('file34_res.txt', 'r') as data:
-    #     st3 = data.readlines()
-    # print(f"Результирующий многочлен {st3}")
-
-
+    
 
 degree_k1 = int(input("Введите степень первого многочлена k1: "))
 degree_k2 = int(input("Введите степень первого многочлена k2: "))
